@@ -1,0 +1,37 @@
+.social-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: pxToUnit(30px, rem);
+
+  @media (min-width: $breakpoint-M) {
+    column-gap: pxToUnit(38px, rem);
+  }
+}
+
+.social-links__link {
+  outline: none;
+  display: flex;
+
+  &:hover .social-links__icon path,
+  &:focus path {
+    fill: var(--accent);
+  }
+}
+
+.social-links__icon {
+  width: pxToUnit(16px, rem);
+  height: pxToUnit(16px, rem);
+  overflow: visible;
+
+  & path {
+    transition: all 0.3s;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    width: pxToUnit(20px, rem);
+    height: pxToUnit(20px, rem);
+  }
+}

@@ -1,0 +1,26 @@
+.portfolio {
+  padding-top: pxToUnit(80px, rem);
+  padding-bottom: pxToUnit(92px, rem);
+
+  @media (min-width: $breakpoint-M) {
+    padding-top: pxToUnit(50px, rem);
+    padding-bottom: pxToUnit(115px, rem);
+  }
+}
+
+.portfolio__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: pxToUnit(42px, rem);
+
+  @media (min-width: $breakpoint-M) {
+    margin-bottom: pxToUnit(60px, rem);
+  }
+
+  @media (min-width: $breakpoint-L) {
+    margin-bottom: pxToUnit(85px, rem);
+  }
+}

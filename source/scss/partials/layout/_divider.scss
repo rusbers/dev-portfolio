@@ -1,0 +1,16 @@
+.divider {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: calc(100% - 2rem);
+    height: 1px;
+    background-color: var(--grey);
+    position: absolute;
+    bottom: 0;
+
+    @media (min-width: $breakpoint-M) {
+      width: calc(100% - 3.75rem);
+    }
+  }
+}

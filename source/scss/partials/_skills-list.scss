@@ -1,0 +1,30 @@
+.skills-list {
+  text-align: center;
+
+  & li:not(:last-child) {
+    padding-bottom: pxToUnit(25px, rem);
+  }
+
+  @media (min-width: $breakpoint-M) {
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(pxToUnit(300px, rem), 2fr));
+    grid-template-rows: auto;
+    column-gap: 0;
+    row-gap: pxToUnit(55px, rem);
+
+    & li:not(:last-child) {
+      padding-bottom: 0;
+    }
+
+    & li div:first-child {
+      padding-bottom: pxToUnit(10px, rem);
+    }
+  }
+}
+
+.skills-list dd {
+  &:not(:last-child) {
+    margin-bottom: pxToUnit(24px, rem);
+  }
+}

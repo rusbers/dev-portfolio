@@ -1,0 +1,40 @@
+.field {
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: var(--white);
+  font-size: pxToUnit(16px, rem);
+  line-height: calc(26 / 16);
+  letter-spacing: pxToUnit(-0.22px, rem);
+  padding: 0 pxToUnit(24px, rem) pxToUnit(15px, rem);
+  border-bottom: 1px solid var(--white);
+  margin-bottom: pxToUnit(32px, rem);
+  display: flex;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-size: pxToUnit(16px, rem);
+    color: rgba(#fff, 50%);
+    line-height: calc(26 / 16);
+    letter-spacing: pxToUnit(-0.22px, rem);
+  }
+
+  &--textarea {
+    min-height: pxToUnit(107px, rem);
+  }
+
+  &--error {
+    border-bottom: 1px solid var(--error);
+  }
+  &--error:focus {
+    border-bottom: 1px solid var(--error);
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  --main-font-family: "Space Grotesk";
+  --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-sans;
+  --app-font-family: var(--main-font-family), var(--font-fallback);
+
+  // Color palette
+  --black: #151515;
+  --accent: #4ee1a0;
+  --dark-grey: #242424;
+  --grey: #d9d9d9;
+  --white: #ffffff;
+  --error: #ff6f5b;
+
+  // Container padding
+  --container-padding: 1rem;
+
+  @media (min-width: $breakpoint-M) {
+    --container-padding: 1.875rem;
+  }
+}

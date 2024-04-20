@@ -1,0 +1,12 @@
+.body-txt {
+  font-family: var(--app-font-family);
+  font-weight: bold;
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: calc(26 / 16);
+
+  @media (min-width: $breakpoint-M) {
+    font-size: pxToUnit(18px, rem);
+    line-height: calc(28 / 18);
+  }
+}

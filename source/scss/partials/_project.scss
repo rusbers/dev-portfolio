@@ -1,0 +1,72 @@
+.project {
+  position: relative;
+  min-width: 11.25rem;
+  min-height: pxToUnit(330px, rem);
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .project__actions--L-screen {
+    opacity: 1;
+  }
+
+  & picture {
+    display: flex;
+  }
+  & img {
+    width: 100%;
+  }
+}
+
+.project__top {
+  position: relative;
+}
+
+.project__heading {
+  text-transform: uppercase;
+  margin-top: pxToUnit(20px, rem);
+  margin-bottom: pxToUnit(7px, rem);
+}
+
+.project__techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxToUnit(18px, rem);
+  margin-bottom: pxToUnit(24px, rem);
+}
+
+.project__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxToUnit(32px, rem);
+
+  &--L-screen {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-L) {
+    &--S-screen {
+      display: none;
+    }
+
+    &--L-screen {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      row-gap: pxToUnit(48px, rem);
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#000, 0.75);
+      opacity: 0;
+      transition: 0.3s ease;
+
+      &:focus-within {
+        opacity: 1;
+      }
+    }
+  }
+}

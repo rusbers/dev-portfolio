@@ -1,0 +1,33 @@
+.skills {
+  padding-block: pxToUnit(40px, rem);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: pxToUnit(530px, rem);
+    height: pxToUnit(129px, rem);
+    bottom: pxToUnit(-64.5px, rem);
+    right: pxToUnit(-342px, rem);
+    background-image: url("../../assets/images/pattern-rings.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    padding-block: pxToUnit(55px, rem);
+
+    &::before {
+      bottom: pxToUnit(-15px, rem);
+      right: pxToUnit(-330px, rem);
+    }
+  }
+
+  @media (min-width: $breakpoint-L) {
+    padding-block: pxToUnit(80px, rem);
+  }
+}
+
+.skills.divider::after {
+  @media (min-width: $breakpoint-M) {
+    display: none;
+  }
+}

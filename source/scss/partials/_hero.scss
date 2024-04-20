@@ -1,0 +1,202 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding-bottom: pxToUnit(93px, rem);
+  &::before {
+    content: "";
+    position: absolute;
+    width: pxToUnit(530px, rem);
+    height: pxToUnit(129px, rem);
+    top: pxToUnit(111px, rem);
+    left: pxToUnit(-342px, rem);
+    background-image: url("../../assets/images/pattern-rings.svg");
+    background-repeat: no-repeat;
+    z-index: -10;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    flex-direction: row-reverse;
+    padding-bottom: pxToUnit(65px, rem);
+
+    &::before {
+      top: pxToUnit(85px, rem);
+      left: pxToUnit(-295px, rem);
+    }
+  }
+
+  @media (min-width: $breakpoint-L) {
+    padding-bottom: pxToUnit(100px, rem);
+  }
+}
+
+.hero__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media (min-width: $breakpoint-M) {
+    align-self: flex-end;
+    align-items: flex-start;
+    z-index: 15;
+    padding-top: pxToUnit(95px, rem);
+  }
+
+  @media (min-width: $breakpoint-L) {
+    justify-content: center;
+    padding-top: pxToUnit(72px, rem);
+    align-self: auto;
+  }
+}
+
+.hero__content {
+  margin-top: pxToUnit(40px, rem);
+  text-align: center;
+
+  @media (min-width: $breakpoint-M) {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero__heading {
+  margin-bottom: pxToUnit(24px, rem);
+
+  &--breaking {
+    @media (min-width: $breakpoint-M) and (max-width: $breakpoint-L) {
+      display: block;
+    }
+  }
+
+  &--second {
+    display: block;
+
+    @media (min-width: $breakpoint-M) and (max-width: $breakpoint-L) {
+      display: inline;
+    }
+  }
+
+  @media (min-width: $breakpoint-M) {
+    margin-bottom: pxToUnit(64px, rem);
+    margin-right: pxToUnit(-147px, rem);
+  }
+}
+
+.hero__body-txt {
+  margin-bottom: pxToUnit(24px, rem);
+  max-width: 38ch;
+
+  @media (min-width: $breakpoint-M) {
+    margin-bottom: pxToUnit(34px, rem);
+  }
+}
+
+.hero__accent {
+  // text-decoration: underline;
+  // text-decoration-color: var(--accent);
+  // text-underline-offset: pxToUnit(8px, rem);
+  position: relative;
+  max-width: fit-content;
+  animation: appear 0.8s;
+  // animation-delay: 0.8s;
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: pxToUnit(5px, rem);
+    background-color: var(--accent);
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: $breakpoint-M) {
+      bottom: pxToUnit(-6px, rem);
+    }
+
+    @media (min-width: $breakpoint-L) {
+      bottom: pxToUnit(8px, rem);
+    }
+  }
+
+  @media (min-width: $breakpoint-M) and (max-width: $breakpoint-L) {
+    display: block;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    padding-top: pxToUnit(10px, rem);
+  }
+}
+
+.hero__img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  order: -1;
+  animation: appear 1s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: pxToUnit(129px, rem);
+    height: pxToUnit(129px, rem);
+    background-image: url("../../assets/images/pattern-circle.svg");
+    background-repeat: no-repeat;
+    right: pxToUnit(-81px, rem);
+    bottom: pxToUnit(0px, rem);
+  }
+
+  & img {
+    object-fit: cover;
+    width: pxToUnit(174px, rem);
+  }
+
+  @media (min-width: $breakpoint-M) {
+    align-self: flex-start;
+    justify-content: flex-end;
+    margin-right: calc(var(--container-padding) * -1);
+    max-width: pxToUnit(322px, rem);
+    &::after {
+      right: pxToUnit(-62px, rem);
+    }
+    & img {
+      width: pxToUnit(322px, rem);
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-L) {
+    max-width: pxToUnit((445px), rem);
+    margin-right: 0;
+    & img {
+      width: pxToUnit(445px, rem);
+      height: 100%;
+    }
+
+    &::after {
+      left: pxToUnit(-65px, rem);
+      bottom: pxToUnit(70px, rem);
+    }
+  }
+}
+
+.hero__button {
+  @media (min-width: $breakpoint-M) {
+    margin-bottom: pxToUnit(10px, rem);
+  }
+}

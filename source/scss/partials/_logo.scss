@@ -1,0 +1,16 @@
+.logo {
+  font-family: var(--app-font-family);
+  font-size: pxToUnit(24px, rem);
+  font-weight: bold;
+  line-height: calc(32 / 24);
+  color: var(--white);
+  letter-spacing: pxToUnit(-0.33px, rem);
+  margin-bottom: pxToUnit(20px, rem);
+
+  @media (min-width: $breakpoint-M) {
+    font-size: pxToUnit(32px, rem);
+    letter-spacing: pxToUnit(-0.44px, rem);
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}

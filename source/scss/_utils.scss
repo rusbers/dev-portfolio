@@ -1,0 +1,9 @@
+@function pxToUnit($pxValue, $unit) {
+  @if $unit == rem {
+    @return math.div($pxValue, 16px) * 1rem;
+  } @else if $unit == em {
+    @return math.div($pxValue, 16px) * 1em;
+  } @else {
+    @error "Unsupported unit. Please use 'rem' or 'em'.";
+  }
+}

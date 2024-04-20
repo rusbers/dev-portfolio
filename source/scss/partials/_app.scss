@@ -1,0 +1,21 @@
+.app__main {
+  overflow-x: hidden;
+  flex: 1 0 auto;
+}
+
+.app__top {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "hero";
+  justify-items: center;
+
+  @media (min-width: $breakpoint-M) {
+    $top-section-height: pxToUnit(575px, rem);
+    min-height: $top-section-height;
+  }
+}
+
+.app__hero {
+  grid-area: header / hero;
+}

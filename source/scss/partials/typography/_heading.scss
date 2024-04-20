@@ -1,0 +1,34 @@
+.heading {
+  font-family: var(--app-font-family);
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+
+  &--M {
+    font-size: pxToUnit(24px, rem);
+    line-height: calc(32 / 24);
+  }
+  &--L {
+    font-size: pxToUnit(32px, rem);
+    line-height: calc(40 / 32);
+    letter-spacing: pxToUnit(-1px, rem);
+    @media (min-width: $breakpoint-M) {
+      font-size: pxToUnit(48px, rem);
+      line-height: calc(56 / 48);
+      letter-spacing: pxToUnit(-1.5px, rem);
+    }
+  }
+  &--XL {
+    font-size: pxToUnit(40px, rem);
+    line-height: 1;
+    letter-spacing: pxToUnit(-1.14px, rem);
+    @media (min-width: $breakpoint-M) {
+      font-size: pxToUnit(72px, rem);
+      letter-spacing: pxToUnit(-2.05px, rem);
+    }
+    @media (min-width: $breakpoint-L) {
+      font-size: pxToUnit(88px, rem);
+      letter-spacing: pxToUnit(-2.5px, rem);
+    }
+  }
+}

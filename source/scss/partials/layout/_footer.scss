@@ -1,0 +1,74 @@
+.app-footer {
+  flex-shrink: 0;
+  background-color: var(--dark-grey);
+  padding-top: pxToUnit(60px, rem);
+}
+
+.app-footer__top {
+  padding-bottom: pxToUnit(100px, rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: pxToUnit(530px, rem);
+    height: pxToUnit(129px, rem);
+    bottom: pxToUnit(80px, rem);
+    left: pxToUnit(-368px, rem);
+    background-image: url("../../assets/images/pattern-rings.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    &::before {
+      bottom: pxToUnit(27px, rem);
+    }
+  }
+
+  @media (min-width: $breakpoint-M) and (max-width: $breakpoint-L) {
+    & > * {
+      width: 63%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $breakpoint-L) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &::before {
+      bottom: pxToUnit(47px, rem);
+    }
+    & > * {
+      width: 40%;
+    }
+  }
+}
+
+.app-footer__text {
+  text-align: center;
+  margin-bottom: pxToUnit(52px, rem);
+
+  @media (min-width: $breakpoint-L) {
+    text-align: start;
+  }
+}
+
+.app-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: pxToUnit(40px, rem);
+  padding-bottom: pxToUnit(20px, rem);
+
+  @media (min-width: $breakpoint-M) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: pxToUnit(30px, rem);
+  }
+}
+
+.app-footer__heading {
+  margin-bottom: pxToUnit(20px, rem);
+}

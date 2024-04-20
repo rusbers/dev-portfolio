@@ -1,0 +1,19 @@
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: pxToUnit(52px, rem);
+
+  @media (min-width: pxToUnit(620px, em)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-M) {
+    column-gap: pxToUnit(20px, rem);
+    row-gap: pxToUnit(70px, rem);
+  }
+
+  @media (min-width: $breakpoint-L) {
+    column-gap: pxToUnit(25px, rem);
+    row-gap: pxToUnit(45px, rem);
+  }
+}

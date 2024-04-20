@@ -1,0 +1,7 @@
+// devices screen width
+$screen-M: 768px;
+$screen-L: 1110px;
+
+// breakpoints:
+$breakpoint-M: pxToUnit($screen-M, em);
+$breakpoint-L: pxToUnit($screen-L, em);

@@ -1,0 +1,10 @@
+.error-message {
+  display: none;
+  font-size: pxToUnit(12px, rem);
+  color: var(--error);
+  line-height: calc(16 / 12);
+  font-weight: 500;
+  letter-spacing: pxToUnit(-0.17px, rem);
+  bottom: 15px;
+  right: 0;
+}

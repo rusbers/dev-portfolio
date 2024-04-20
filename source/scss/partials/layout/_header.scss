@@ -1,0 +1,24 @@
+.app-header {
+  grid-area: header;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  padding-block: pxToUnit(20px, rem);
+  @media (min-width: $breakpoint-M) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: pxToUnit(25px, rem);
+  }
+
+  @media (min-width: $breakpoint-L) {
+    padding-block: pxToUnit(30px, rem);
+
+    & .social-links {
+      padding-right: pxToUnit(30px, rem);
+    }
+  }
+}

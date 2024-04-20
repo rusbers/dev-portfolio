@@ -1,0 +1,12 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $breakpoint-M) {
+    padding-top: pxToUnit(30px, rem);
+  }
+}
